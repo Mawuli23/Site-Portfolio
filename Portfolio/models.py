@@ -6,7 +6,7 @@ from django.db import models
 class Skill(models.Model):
     title = models.CharField(max_length=255, unique=True, verbose_name="Titre")
     description = models.TextField(blank=True, verbose_name="Description")
-    image = models.ImageField(upload_to='Parcours/Skills/', blank=True, null=True)
+    image = models.ImageField(upload_to='Skills/', blank=True, null=True)
 
     def __str__(self):
         return self.title
@@ -23,7 +23,7 @@ class Parcour(models.Model):
     debut = models.DateField(blank=True, null=True)
     fin = models.DateField(blank=True, null=True)
     description = models.TextField(blank=True, verbose_name="Description", null=True)
-    logo = models.ImageField(upload_to='Parcours/Skills/', blank=True, null=True)
+    logo = models.ImageField(upload_to='Parcours/',blank=True, null=True)
     entreprise = models.CharField(max_length=255, verbose_name="entreprise", null=True)
     ville = models.CharField(max_length=255, verbose_name="Ville", null=True)
     pays = models.CharField(max_length=255, verbose_name="Pays", null=True)
