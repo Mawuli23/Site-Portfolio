@@ -1,0 +1,68 @@
+@media screen and (max-width: 768px) {
+  .navbar .site-menu {
+    flex-direction: column;
+    display: none;
+  }
+  .navbar {
+    padding: 0 2rem;
+  }
+
+  .navbar #linkedin {
+    display: none;
+  }
+
+  .navbar .hamburger {
+    display: flex;
+  }
+
+  .navbar ul.show {
+    display: flex;
+  }
+
+  .navbar ul.show li {
+    padding: 0.4rem 1rem;
+  }
+
+  .navbar ul.show li:hover {
+    padding: 0.3rem 1rem;
+  }
+
+  /**************Presentation**************/
+  .presentation {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8rem;
+  }
+
+  .presentation .img-photo {
+    height: 15rem;
+    padding-left: 0rem;
+    padding-top: 2rem;
+}
+
+/****************Contact*******************/
+
+.contacts-all .contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacts-all h3 {
+    font-size: 1.2rem;
+}
+
+.contacts-all .contacts a{
+    padding: .5rem 0rem;
+}
+
+.header-menu-open .presentation {
+    padding-top: 15rem;
+  }
+
+}
+

@@ -1,0 +1,158 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'Portfolio/css/styles.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'Portfolio/css/responsive_768.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'Portfolio/css/responsive_480.css' %}"
+    />
+    <title>mawulisenyo</title>
+  </head>
+  <body>
+    <header id="header">
+      <nav class="navbar">
+        <a href="#"><span class="logo-site">M</span></a>
+        <ul class="site-menu">
+          <a href="#presentation"><li>Présentation</li></a>
+          <a href="#skill"><li>Compétences</li></a>
+          <a href="#parcours"><li>Parcours</li></a>
+          <a href="#formation-continue"><li>Formation continue</li></a>
+          <a href="#projet"><li>Projets</li></a>
+          <a href="#contacts"><li>Contacts</li></a>
+        </ul>
+
+        <a
+          id="linkedin"
+          href="https://www.linkedin.com/in/mawulisenyo/"
+          ,
+          target="_blank"
+          ><span class="img-nom-reseau"
+            ><img
+              class="img-reseau"
+              src="{% static 'Portfolio/img/reseau/linkedin.png' %}"
+              alt=""
+            /><span>LinkedIn</span></span
+          ></a
+        >
+
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+    <!--Présentation de qui je suis-->
+    <section id="presentation" class="presentation">
+      <div class="present">
+        <h2>Komlavi Mawuli</h2>
+        <h1>SENYO</h1>
+        <div class="mon-titre">
+          <h3>Docteur et Ingénieur génie mécanique</h3>
+          <h5>Spécialité conception modélisation et simulation numérique</h5>
+        </div>
+
+        <a href="{% static 'Portfolio/pdf/mon_cv.pdf' %}" download="Mon_CV.pdf"
+          ><button>Mon CV</button></a
+        >
+      </div>
+      <img
+        class="img-photo"
+        src="{% static 'Portfolio/img/photo/photo-passport.png' %}"
+        alt=""
+      />
+    </section>
+    <!--Compétences-->
+    <section id="skill">
+      <div class="titre-description">
+        <h2>Mes Savoir-faire</h2>
+        <p>
+          Ingénieur R&D en modélisation et simulation numérique par éléments
+          finis, Ingénieur génie mécanique en conception, en matériaux et
+          procédés. Je suis curieux et rigoureux, j’aime apprendre des autres,
+          partager mes connaissances, travailler en équipe et surmonter les
+          difficultés dans le travail. Je suis disponible immédiatement.
+        </p>
+      </div>
+      <div class="competences">
+        {% for skill in skills %}
+        <div class="competence">
+          <span
+            ><img id="img-skill" src="{{skill.image.url}}" alt="c'est passé"
+          /></span>
+          <h3 id="skillcolor">{{skill.title}}</h3>
+          <p>{{skill.description}}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    
+    <!--Mon Parcours-->
+    <section id="parcours" class="parcours">
+        <h3 class="titre-skill">Mon Parcours</h3>
+      <div class="careers">
+        {% for parcour in parcours %}
+        <div class="career">
+          <img
+            class="circular-image"
+            src="{{parcour.logo.url}}"
+            alt="logo-entreprise"
+          />
+          <div class="career-description">
+            <h5>{{parcour.debut|date:"F Y"}} - {{parcour.fin|date:"F Y"}}</h5>
+            <h4 class="titre-parcours">{{parcour.title}}</h4>
+            <h5>
+              {{parcour.entreprise}}<span class="separator">•</span>{{parcour.ville}}({{parcour.pays}})<span class="separator">•</span>{{parcour.type}}
+            </h5>
+              <p id="description-career">{{parcour.description}}</p>
+                
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+
+    <!--Me contacter-->
+    <section id="contacts" class="contacts-all">
+      <h3>Souhaitez-vous me contacter ?</h3>
+      <div class="contacts">
+        <a href="mailto:mawulikomlavi.senyo@gmail.com" , target="_blank"
+          ><span class="img-nom-reseau"
+            ><img
+              class="img-reseau"
+              src="{% static 'Portfolio/img/reseau/email.png' %}"
+              alt=""
+            /><span>Envoyez-moi un e-mail</span></span
+          ></a
+        >
+
+        <a href="https://www.linkedin.com/in/mawulisenyo/" , target="_blank"
+          ><span class="img-nom-reseau"
+            ><img
+              class="img-reseau"
+              src="{% static 'Portfolio/img/reseau/linkedin.png' %}"
+              alt=""
+            /><span>Ecrivez-moi sur LinkedIn</span></span
+          ></a
+        >
+      </div>
+    </section>
+
+    <!--Pied de page-->
+    <footer class="main_footer">
+      <div class="reseau"><span>Komlavi Mawuli SENYO</span></div>
+      <p>&copy; 2024 Tous droits réservés &copy;</p>
+    </footer>
+
+    <script src="{% static 'Portfolio/js/script.js' %}"></script>
+  </body>
+</html>
