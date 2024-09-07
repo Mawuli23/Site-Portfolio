@@ -278,13 +278,13 @@ footer {
   .career:nth-child(odd)  .career-description{
     padding-right: 1rem;
     text-align: right;
-    width: 60%;
+    width: 70%;
   }
 
   .career:nth-child(even)  .career-description{
     padding-left: 1rem;
     text-align: left;
-    width: 60%;
+    width: 70%;
   }
 
   .career:nth-child(odd)  .career-description #description-career{
