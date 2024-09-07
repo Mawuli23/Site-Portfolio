@@ -57,7 +57,7 @@
         <h1>SENYO</h1>
         <div class="mon-titre">
           <h3>Docteur et Ingénieur génie mécanique</h3>
-          <h5>Spécialité conception modélisation et simulation numérique</h5>
+          <h5>Spécialité Matériaux et Procédés : Conception, Modélisation et Simulation numérique</h5>
         </div>
 
         <a href="{% static 'Portfolio/pdf/mon_cv.pdf' %}" download="Mon_CV.pdf"
@@ -94,10 +94,10 @@
         {% endfor %}
       </div>
     </section>
-    
+
     <!--Mon Parcours-->
     <section id="parcours" class="parcours">
-        <h3 class="titre-skill">Mon Parcours</h3>
+      <h3 class="titre-skill">Mon Parcours</h3>
       <div class="careers">
         {% for parcour in parcours %}
         <div class="career">
@@ -110,16 +110,17 @@
             <h5>{{parcour.debut|date:"F Y"}} - {{parcour.fin|date:"F Y"}}</h5>
             <h4 class="titre-parcours">{{parcour.title}}</h4>
             <h5>
-              {{parcour.entreprise}}<span class="separator">•</span>{{parcour.ville}}({{parcour.pays}})<span class="separator">•</span>{{parcour.type}}
+              {{parcour.entreprise}}<span class="separator">•</span
+              >{{parcour.ville}} ({{parcour.pays}})<span class="separator"
+                >•</span
+              >{{parcour.type}}
             </h5>
-              <p id="description-career">{{parcour.description}}</p>
-                
+            <p id="description-career">{{parcour.description}}</p>
           </div>
         </div>
         {% endfor %}
       </div>
     </section>
-
 
     <!--Me contacter-->
     <section id="contacts" class="contacts-all">
