@@ -14,4 +14,54 @@
     box-sizing: border-box;
     margin: 1rem 1rem;
   }
+
+  /****Parcours******/
+
+.career{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-items: start;
+  padding: 1rem 1rem;
+  box-sizing: border-box;
+  border: 1px solid blue;
+  width: 90%;
+}
+
+
+.career:nth-child(odd) {
+  justify-content: right;
+  flex-direction: row-reverse;
+  transform: translateX(calc(0% + 0rem));
+}
+
+.career:nth-child(even) {
+  justify-content: left;
+  transform: translateX(calc(0% - 0rem));
+  justify-content: flex-start;
+  padding-top: 2rem;
+}
+
+.career:nth-child(odd)  .career-description{
+  padding-right: 1rem;
+  text-align: right;
+  width: 100%
+}
+
+.career:nth-child(even)  .career-description{
+  padding-left: 1rem;
+  text-align: left;
+  width: 100%;
+}
+
+.career:nth-child(odd)  .career-description #description-career{
+  padding-top: .5rem;
+  text-align: right;
+}
+
+.career:nth-child(even)  .career-description #description-career{
+  padding-top: .5rem;
+  text-align: left;
+}
 }
