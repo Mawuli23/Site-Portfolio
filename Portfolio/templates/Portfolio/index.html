@@ -79,7 +79,7 @@
           finis, Ingénieur génie mécanique en conception, en matériaux et
           procédés. Je suis curieux et rigoureux, j’aime apprendre des autres,
           partager mes connaissances, travailler en équipe et surmonter les
-          difficultés dans le travail. Je suis disponible immédiatement.
+          difficultés dans le travail.
         </p>
       </div>
       <div class="competences">
@@ -89,7 +89,7 @@
             ><img id="img-skill" src="{{skill.image.url}}" alt="c'est passé"
           /></span>
           <h3 id="skillcolor">{{skill.title}}</h3>
-          <p>{{skill.description}}</p>
+          <p>{{skill.description|safe}}</p>
         </div>
         {% endfor %}
       </div>
